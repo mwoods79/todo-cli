@@ -29,9 +29,33 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`todo autocomplete [SHELL]`](#todo-autocomplete-shell)
 * [`todo hello [FILE]`](#todo-hello-file)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo list`](#todo-list)
+
+## `todo autocomplete [SHELL]`
+
+display autocomplete installation instructions
+
+```
+USAGE
+  $ todo autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
+
+OPTIONS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+EXAMPLES
+  $ todo autocomplete
+  $ todo autocomplete bash
+  $ todo autocomplete zsh
+  $ todo autocomplete --refresh-cache
+```
+
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.1.2/src/commands/autocomplete/index.ts)_
 
 ## `todo hello [FILE]`
 
@@ -89,9 +113,10 @@ OPTIONS
   --user=user        id of the user you want todos for
 
 EXAMPLE
-  $ todo list
-  ✅Do your work!
-  ❌Do some more work!
+  todo list --user=1
+  Completed Title
+  ❌        delectus aut autem
+  ✅        quis ut nam facilis et officia qui
 ```
 
 _See code: [src/commands/list.ts](https://github.com/mwoods79/todo/blob/v0.0.0/src/commands/list.ts)_
