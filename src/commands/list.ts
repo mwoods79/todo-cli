@@ -58,7 +58,7 @@ Completed Title
         extended: true
       },
       completed: {
-        get: todo => todo.completed ? '✅' : ' '
+        get: todo => todo.completed ? '✅' : '❌'
       },
       title: {
         minWidth: 7,
